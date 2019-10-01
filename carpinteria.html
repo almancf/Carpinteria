@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carpinteria Mazarredo</title>
+    <style>
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 4px 8px 0 rgba(187, 24, 146, 0.2);
+            width: 350px;
+            height: 450px;
+        }
+        #imagen{
+            display: flex;
+            justify-content: space-around;
+        }
+        #caja{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card h3{
+            text-align: center;
+            font-size: 2em;
+        }
+        #precio{
+            display: flex;
+            justify-content: space-around;
+        }
+        #cabecera{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #logo{
+            display: flex;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        let nombre = window.prompt('¿Como te llamas? ');
+        let producto = window.prompt('¿Qué desea comprar? ');
+        let cantidad = window.parseInt(prompt('¿Cuantas unidades quieres comprar?'));
+        let precio = 7.50;
+        document.write(`
+        <div id="cabecera">
+            <div id="logo">
+                <img src="iconos/logo.svg" width=50px height=50px />
+                <h1>Carpinteria Mazarredo</h1>
+            </div>
+            <div>
+                <p>Bienvenido ${nombre}</p>
+            </div>
+        </div>
+        `);
+        document.write(`
+        <div id="caja">
+            <div class="card">
+                <div id="imagen">
+                    <img src="iconos/${producto}.svg" width=300px height=300px />
+                </div>
+                <h3>${producto}</h3>
+                <div id="precio">
+                    <p>Cantidad: <Strong> ${cantidad}</Strong> </p>
+                    <p>Precio Unidad: <Strong>  ${precio}</Strong> </p>
+                    <p>Precio total: <Strong> ${precio*cantidad}</Strong> </p>
+                </div>
+            </div>
+        </div>`);
+        document.write(`
+        <p>Enlaces de Interes</p>
+        <ul>
+            <li><a href="#">Leroy Merlin</a></li>
+            <li><a href="#">IKEA by Jon</a></li>
+            <li><a href="#">Bricomania</a></li>    
+        </ul>
+        <p>&#169 2019 Carpinteria Mazarredo</p>`);
+
+        
+    </script>
+</body>
+</html>
